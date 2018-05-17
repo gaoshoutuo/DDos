@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DDosActivity"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="教务系统:http://122.225.19.20/default2.aspx
+ 主页:http://122.225.92.218/index.php
+"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/ddos_edit"
+        android:hint="请输入你想攻击的网址"
+        />
+
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimary"
+        ></View>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:id="@+id/ddos_start"
+        android:text="开始攻击"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimary"
+        ></View>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:id="@+id/ddos_finish"
+        android:text="结束攻击"
+        />
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimary"
+        ></View>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:id="@+id/ddos_test"
+        android:text="测试攻击"
+        />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="5dp"
+        android:layout_gravity="end"
+        android:background="@color/colorPrimary"
+        ></View>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="15sp"
+        android:id="@+id/ddos_liu"
+        android:text="预留攻击"
+        />
+</LinearLayout>
